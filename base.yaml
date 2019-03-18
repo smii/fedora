@@ -1,0 +1,13 @@
+- name: being lazy. install base
+  hosts: localhost
+  vars_files: 
+    - vars/repositories.yml
+    - vars/packages_yum.yml
+    - vars/packages_flatpak.yml
+    - vars/packages_pip.yml
+    - vars/packages_binaries.yml
+    - vars/gnome.yml
+  
+  tasks:
+    #- include: tasks/packages.yml
+    - include: tasks/gnome.yml

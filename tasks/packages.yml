@@ -1,0 +1,38 @@
+  - name: yum_repositories
+    become: yes
+    yum_repository:
+      name: "{{ item.repo }}"
+      description: "{{ item.description }}"
+      baseurl: "{{ item.baseurl }}"
+      gpgcheck: "{{ item.gpgcheck }}"
+      gpgkey: "{{ item.gpgkey }}"
+    with_items:
+      - "{{ default_repos }}"
+    register: yum_repo_oke
+
+  - name: yum_packages
+    become: yes
+    yum: 
+      name: "{{ item }}"
+      state: present
+    with_items: 
+      - "{{ packages }}"
+    when: yum_repo_oke|success
+
+  - name: python_pip_packages
+    become: yes
+    pip: 
+      name: "{{ item }}"
+    with_items:
+      - "{{ python_packages }}"
+
+  - name: binaries
+    become: yes
+    unarchive:
+      src: "{{ item.url }}"
+      dest: "{{ item.path }}"
+      creates: "{{ item.path + item.binary_name }}"
+      mode: 0555
+      remote_src: yes
+    with_items:
+      - "{{ binaries }}"

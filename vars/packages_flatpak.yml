@@ -1,0 +1,8 @@
+flatpack: 
+  - com.spotify.Client
+  - com.getpostman.Postman
+  - org.gtk.Gtk3theme.Materia
+  - org.gtk.Gtk3theme.Materia-compact
+  - org.gtk.Gtk3theme.Materia-dark
+  - org.gtk.Gtk3theme.Materia-dark-compact
+  - com.github.bilelmoussaoui.Authenticator

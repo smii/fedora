@@ -1,0 +1,33 @@
+
+    - name: install gnome extentions
+      include_role:
+          name: gnome-extensions
+
+    - name: lockscreen wallpaper
+      copy: 
+        src: files/wallpapers/luffy_minimalistic_lockscreen.jpg
+        dest: /home/smii/.lockscreen.jpg  
+
+    - name: copy desktop wallpaper
+      copy: 
+        src: files/wallpapers/luffy_minimalstic_desktop.jpg
+        dest: /home/smii/.wallpaper.jpg
+
+    - name: Set GNOME wallpaper
+      become_user: jay
+      dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/smii/.wallpaper.jpg'"
+
+    - name: Set lock screen background
+      become_user: jay
+      dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///home/smii/.lockscreen.jpg'"
+
+
+
+   # - name: set wallpaper
+   #  
+   #
+   #  - name: terminal properties
+   #
+   # - name: set themes
+   #
+   #  - 
