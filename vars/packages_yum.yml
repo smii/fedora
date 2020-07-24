@@ -1,17 +1,16 @@
 packages:
   - byobu
-  - https://az764295.vo.msecnd.net/stable/a3db5be9b5c6ba46bb7555ec5d60178ecc2eaae4/code-1.32.3-1552607091.el7.x86_64.rpm
   - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-29.noarch.rpm
   - powerline-fonts.noarch
   - vim-powerline
   - redhat-rpm-config
-  - python2-devel
+  - python3-devel
   - filezilla
   - vlc
   - zsh
   - vim
-  - steam
-  - google-chrome
+#  - steam
+#  - google-chrome
   - gnome-tweaks
   - remmina
   - pinta
