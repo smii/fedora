@@ -4,11 +4,11 @@ default_repos:
     baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
     gpgcheck: yes
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
-  - repo: VirtualBox
-    description: Virtualbox Repo
-    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
-    gpgcheck: yes
-    gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
+  #- repo: VirtualBox
+  #  description: Virtualbox Repo
+  #  baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
+  #  gpgcheck: yes
+  #  gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
   - repo: Visual Studio Code
     description: visual studio code
     baseurl: https://packages.microsoft.com/yumrepos/vscode
