@@ -1,10 +1,10 @@
 binaries: 
   - binary_name: terraform
-    url: 'https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip' 
+    url: 'https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip' 
     path: /usr/local/bin/
   - binary_name: vagrant
     url: 'https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_linux_amd64.zip'
     path: /usr/local/bin/
-  - binary_name: minishift
-    url: 'https://github.com/minishift/minishift/releases/download/v1.32.0/minishift-1.32.0-windows-amd64.zip'
-    path: /usr/local/bin/
+#  - binary_name: minishift
+#    url: 'https://github.com/minishift/minishift/releases/download/v1.32.0/minishift-1.32.0-windows-amd64.zip'
+#    path: /usr/local/bin/
